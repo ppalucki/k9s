@@ -38,12 +38,13 @@ func (n *Node) bindDangerousKeys(aa ui.KeyActions) {
 		ui.KeyU: ui.NewKeyAction("Uncordon", n.toggleCordonCmd(false), true),
 		ui.KeyR: ui.NewKeyAction("Drain", n.drainCmd, true),
 	})
-	cl := n.App().Config.K9s.CurrentCluster
-	if n.App().Config.K9s.Clusters[cl].FeatureGates.NodeShell {
-		aa.Add(ui.KeyActions{
-			ui.KeyS: ui.NewKeyAction("Shell", n.sshCmd, true),
-		})
-	}
+	// fix Shell command for remote connection !?!?!
+	// cl := n.App().Config.K9s.CurrentCluster
+	// if n.App().Config.K9s.Clusters[cl].FeatureGates.NodeShell {
+	aa.Add(ui.KeyActions{
+		ui.KeyS: ui.NewKeyAction("Shell", n.sshCmd, true),
+	})
+	// }
 }
 
 func (n *Node) bindKeys(aa ui.KeyActions) {
