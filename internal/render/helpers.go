@@ -66,7 +66,7 @@ func AsThousands(n int64) string {
 // Happy returns true if resource is happy, false otherwise.
 func Happy(ns string, h Header, r Row) bool {
 	// DONE REPORT AS FAILED for some strange columns as INVALID !!!
-	return true
+	// return true
 	if len(r.Fields) == 0 {
 		return true
 	}
