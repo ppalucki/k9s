@@ -1,0 +1,8 @@
+10c10
+< 	"github.com/derailed/tcell/v2"
+---
+> 	"github.com/gdamore/tcell/v2"
+442c442
+< 	t.columnOffset = 0
+---
+> 	// t.columnOffset = 0
